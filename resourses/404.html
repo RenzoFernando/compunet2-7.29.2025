@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página No Encontrada</title>
+    <meta name="description" content="Página de error 404 para SleepTimer.">
+    <meta name="author" content="Renzo Fernando">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales específicos para la página 404 */
+        .error-code {
+            font-size: 8rem; /* Tamaño grande para el número 404 */
+            font-weight: 900;
+            color: white;
+            letter-spacing: -0.05em;
+            text-shadow: 0 0 25px var(--accent-glow), 0 0 50px rgba(48, 182, 196, 0.3);
+            line-height: 1;
+            animation: float-in 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        @keyframes float-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 0.5rem;
+        }
+        .error-description {
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .home-button {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 0.75rem 2rem;
+            background-color: var(--accent-cyan);
+            color: var(--bg-dark-blue);
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .home-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 text-center">
+
+<!-- Contenedor para el fondo de estrellas (reutiliza el de style.css) -->
+<div id="stars-container"></div>
+
+<main class="w-full max-w-lg mx-auto z-10">
+    <!-- Encabezado consistente con el resto de la app -->
+    <div class="flex justify-center items-center gap-3 mb-4">
+        <svg class="w-12 h-12 text-cyan-300" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.1851 3.25C11.8384 3.25 9.03515 5.43839 8.21939 8.51042C5.35818 9.07008 3.25 11.5335 3.25 14.625C3.25 18.1023 6.14772 21 9.625 21H18.375C20.9372 21 23 18.9372 23 16.375C23 14.1161 21.3111 12.2183 19.1848 11.8542C19.6014 10.3703 19.5222 8.78173 18.9686 7.33336C18.415 5.88499 17.4164 4.65631 16.1249 3.82981C15.8251 3.63405 15.5086 3.48483 15.1851 3.38831" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h1 class="app-title">SleepTimer</h1>
+    </div>
+
+    <div class="mt-8">
+        <h2 class="error-code">404</h2>
+        <p class="error-message">Página No Encontrada</p>
+        <p class="error-description">
+            Oops. Parece que la página que buscas se perdió entre las estrellas.
+        </p>
+
+        <!-- Botón para regresar al inicio -->
+        <a href="/" class="home-button">
+            Volver a la Base
+        </a>
+    </div>
+
+</main>
+
+<script>
+    // Script para generar las estrellas, igual que en las otras páginas.
+    document.addEventListener('DOMContentLoaded', () => {
+        const createStars = (count) => {
+            const container = document.getElementById('stars-container');
+            if (!container) return;
+            for (let i = 0; i < count; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                container.appendChild(star);
+            }
+        };
+        createStars(100);
+    });
+</script>
+
+</body>
+</html>

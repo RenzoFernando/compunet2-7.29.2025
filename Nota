@@ -1,0 +1,16 @@
+Aclaración sobre el Proyecto y Uso de Herramientas
+
+Quería dejar esta nota para aclarar dos puntos importantes sobre este proyecto.
+
+1.  Sobre el uso de Inteligencia Artificial:
+    Para este trabajo, he utilizado una herramienta de IA con un objetivo muy específico: que me ayudara a comentar el código Java.
+    Por si ve comentarios "raros", esta es mi forma de estudiar y generar apuntes; al ver el código explicado línea por línea, me resulta
+    mucho más fácil entender la lógica y los conceptos que estamos aplicando. La estructura y la funcionalidad del código son
+    trabajo propio, la IA solo fue un apoyo para la documentación y mi comprensión personal.
+
+2.  Sobre la carpeta `resourses`:
+    Todo el contenido que se encuentra en la carpeta `resourses` (los archivos HTML, CSS y JavaScript) pertenece a un pequeño proyecto
+    personal en el que he estado trabajando por mi cuenta. Decidí usarlo como cliente web para este servidor porque me permitía tener
+    una interfaz funcional y completa para probar el backend. Espero que no haya ningún problema con haberlo incluido.
+
+Gracias por su comprensión.
